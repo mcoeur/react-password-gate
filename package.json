@@ -30,10 +30,10 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
-  "author": "",
+  "author": "Mallory Coeur <mallory.coeur@gmail.com>",
   "homepage": "",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/mcoeur/react-password-gate",
   "keywords": [
     "password",
     "gate",
