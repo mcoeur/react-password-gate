@@ -35,6 +35,9 @@
   "license": "MIT",
   "repository": "",
   "keywords": [
-    "react-component"
+    "password",
+    "gate",
+    "react",
+    "basic-auth"
   ]
 }

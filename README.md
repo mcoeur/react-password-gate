@@ -33,6 +33,10 @@ ReactDOM.render(
 `accessList` is a `.htpasswd` syntax compliant array of credentials.  
 Each line follows this syntax : `{username}:{bcryptPasswordHash}`
 
+When not authenticated, it renders the following form :
+
+![Alt text](screenshot.png?raw=true "Screenshot")
+
 ## The Good :thumbsup:
 
 **Super easy to use**  
@@ -41,8 +45,13 @@ No database needed
 
 ## The Bad :thumbsdown:
 
-**Security level : meh/10. **  
+**Security level : meh/10.**  
 All password hash are public and your credentials will be stored **in cleartext** on local storage.
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
+## Todo
+
+- Handle bad credentials
+- Pass a custom form component as props
+
+[npm-badge]: https://img.shields.io/npm/v/react-password-gate.png?style=flat-square
 [npm]: https://www.npmjs.org/package/react-password-gate
