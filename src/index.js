@@ -102,13 +102,14 @@ class AuthenticationForm extends React.Component {
 }
 
 const styles = {
-  title: {
-    fontSize: 18
-  },
   container: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center"
+    alignItems: "center",
+    fontFamily: "Arial, sans-serif"
+  },
+  title: {
+    fontSize: 18
   },
   form: {
     textAlign: "center"
