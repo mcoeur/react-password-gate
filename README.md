@@ -35,7 +35,7 @@ Each line follows this syntax : `{username}:{bcryptPasswordHash}`
 
 When not authenticated, it renders the following form :
 
-![Alt text](screenshot.png?raw=true "Screenshot")
+!["Screenshot"](https://github.com/mcoeur/react-password-gate/blob/master/screenshot.png?raw=true "Screenshot")
 
 ## The Good :thumbsup:
 
