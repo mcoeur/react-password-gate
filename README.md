@@ -1,16 +1,48 @@
 # react-password-gate
 
-[![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
 
-Describe react-password-gate here.
+react-password-gate is a quick and dirty solution to add _basic-auth like_ password protection to your react project.
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+## Installation
+
+```bash
+npm install react-password-gate
+```
+
+## Usage
+
+Update your main render to wrap your app with the `PasswordGate` component :
+
+```javascript
+import PasswordGate from "react-password-gate";
+
+const accessList = [
+  "test:$2a$10$A/1QDqi8DeNBeavrPXKSUOoNWDd75Qp0CwxoRGVZ3/nJQeT1vs9kO",
+  "user1:$2a$10$xF9XbrsoNhT8m37Y6DkwteçkgHlpT6m6zbY5e9yNg1fzPicqVn1ntG"
+];
+
+ReactDOM.render(
+  <PasswordGate accessList={accessList}>
+    <App />
+  </PasswordGate>,
+  document.getElementById("root")
+);
+```
+
+`accessList` is a `.htpasswd` syntax compliant array of credentials.  
+Each line follows this syntax : `{username}:{bcryptPasswordHash}`
+
+## The Good :thumbsup:
+
+**Super easy to use**  
+No need to get access to the web server to enable basic authentication.  
+No database needed
+
+## The Bad :thumbsdown:
+
+**Security level : meh/10. **  
+All password hash are public and your credentials will be stored **in cleartext** on local storage.
 
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
-
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+[npm]: https://www.npmjs.org/package/react-password-gate

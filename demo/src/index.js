@@ -1,15 +1,20 @@
-import React, {Component} from 'react'
-import {render} from 'react-dom'
+import React, { Component } from "react";
+import { render } from "react-dom";
 
-import Example from '../../src'
+import PasswordGate from "../../src";
 
 class Demo extends Component {
   render() {
-    return <div>
-      <h1>react-password-gate Demo</h1>
-      <Example/>
-    </div>
+    return (
+      <PasswordGate
+        accessList={[
+          "test:$2a$10$A/1QDqi8DeNBeavrPXKSUOoNWDd75Qp0CwxoRGVZ3/nJQeT1vs9kO"
+        ]}
+      >
+        <div>Your password protected app here</div>
+      </PasswordGate>
+    );
   }
 }
 
-render(<Demo/>, document.querySelector('#demo'))
+render(<Demo />, document.querySelector("#demo"));
